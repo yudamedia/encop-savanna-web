@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Enkop earth tone extensions
+        snow: {
+          DEFAULT: "hsl(var(--snow))",
+          foreground: "hsl(var(--snow-foreground))",
+        },
+        conservation: {
+          DEFAULT: "hsl(var(--conservation))",
+          foreground: "hsl(var(--conservation-foreground))",
+        },
+        sunset: {
+          orange: "hsl(var(--sunset-orange))",
+          pink: "hsl(var(--sunset-pink))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +70,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      backgroundImage: {
+        'earth-gradient': 'var(--gradient-earth)',
+        'sky-gradient': 'var(--gradient-sky)',
+        'sunset-gradient': 'var(--gradient-sunset)',
+        'conservation-gradient': 'var(--gradient-conservation)',
+      },
+      boxShadow: {
+        'earth': 'var(--shadow-earth)',
+        'soft': 'var(--shadow-soft)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
       },
       borderRadius: {
         lg: "var(--radius)",
