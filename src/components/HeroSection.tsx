@@ -109,25 +109,18 @@ export const HeroSection = () => {
           <p className="text-lg mb-12 opacity-90 animate-fade-in animation-delay-400">
             Enkop Eco Lodge, Amboseli
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animation-delay-600">
-            <Button className="btn-earth text-foreground px-8 py-4 text-lg">
-              <Calendar className="mr-2 h-5 w-5" />
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in animation-delay-600">
+            <Button className="btn-earth text-foreground px-12 py-6 text-xl font-semibold shadow-2xl hover:shadow-earth/50 transform hover:scale-105 transition-all duration-300">
+              <Calendar className="mr-3 h-6 w-6" />
               Book Your Stay
             </Button>
-            <Button variant="outline" className="glass-effect border-white/30 text-white hover:bg-white/20 px-8 py-4 text-lg">
+            <Button variant="outline" className="glass-effect border-white/40 text-white hover:bg-white/30 px-12 py-6 text-xl font-semibold shadow-2xl backdrop-blur-md transform hover:scale-105 transition-all duration-300">
               Explore Experiences
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Booking Bar - Sticky Header */}
-      <div className="absolute top-0 right-0 z-30 p-6">
-        <Button className="btn-conservation shadow-lg">
-          <Calendar className="mr-2 h-4 w-4" />
-          Quick Book
-        </Button>
-      </div>
     </section>
   );
 };
