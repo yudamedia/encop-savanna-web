@@ -114,7 +114,7 @@ export const HeroSection = () => {
               <Calendar className="mr-3 h-6 w-6" />
               Book Your Stay
             </Button>
-            <Button variant="outline" className="glass-effect border-white/40 text-white hover:bg-white/30 px-12 py-6 text-xl font-semibold shadow-2xl backdrop-blur-md transform hover:scale-105 transition-all duration-300">
+            <Button variant="outline" className="bg-white/20 border-white/60 text-white hover:bg-white/40 hover:text-foreground px-12 py-6 text-xl font-semibold shadow-2xl backdrop-blur-md transform hover:scale-105 transition-all duration-300 [text-shadow:_0_1px_2px_rgb(0_0_0_/_50%)]">
               Explore Experiences
             </Button>
           </div>
