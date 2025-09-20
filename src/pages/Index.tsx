@@ -2,6 +2,7 @@ import { Navigation } from '@/components/Navigation';
 import { HeroSection } from '@/components/HeroSection';
 import { WelcomeSection } from '@/components/WelcomeSection';
 import { AccommodationSection } from '@/components/AccommodationSection';
+import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
         <WelcomeSection />
         <AccommodationSection />
       </main>
+      <Footer />
     </div>
   );
 };
