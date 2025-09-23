@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,11 @@ export const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Experiences', href: '#experiences' },
-    { name: 'Accommodation', href: '#accommodation' },
+    { name: 'Experiences', href: '/experiences' },
+    { name: 'Accommodation', href: '/accommodation' },
     { name: 'Conservation', href: '#conservation' },
     { name: 'Culture', href: '#culture' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -30,35 +31,49 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="font-serif text-2xl md:text-3xl font-bold text-primary">
-              Enkop
-              <span className="text-base ml-2 font-inter font-normal text-muted-foreground">
-                Eco Lodge
-              </span>
-            </h1>
+            <Link to="/" className="block">
+              <h1 className="font-serif text-2xl md:text-3xl font-bold text-primary">
+                Enkop
+                <span className="text-base ml-2 font-inter font-normal text-muted-foreground">
+                  Eco Lodge
+                </span>
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </div>
           </div>
 
           {/* Desktop Book Button */}
           <div className="hidden md:block">
-            <Button className="btn-conservation">
-              <Calendar className="mr-2 h-4 w-4" />
-              Book Now
-            </Button>
+            <Link to="/booking">
+              <Button className="btn-conservation">
+                <Calendar className="mr-2 h-4 w-4" />
+                Book Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -79,20 +94,33 @@ export const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2 shadow-soft">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-colors duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('#') ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-3 py-2 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <div className="pt-4 pb-2">
-                <Button className="btn-conservation w-full">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Book Now
-                </Button>
+                <Link to="/booking" className="block">
+                  <Button className="btn-conservation w-full">
+                    <Calendar className="mr-2 h-4 w-4" />
+                    Book Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
