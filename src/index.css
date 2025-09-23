@@ -137,6 +137,58 @@
     --sidebar-border: 25 20% 20%;
     --sidebar-ring: 15 45% 45%;
   }
+
+  /* Custom variant with user-provided color palette */
+  .variant-custom {
+    /* #680747, #105A60, #141010, #385723 converted to HSL */
+    --background: 0 0% 97%; /* Light background */
+    --foreground: 0 0% 8%; /* #141010 - very dark gray */
+
+    --card: 0 0% 95%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 95%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 318 77% 22%; /* #680747 - dark purple/magenta */
+    --primary-foreground: 0 0% 97%;
+
+    --secondary: 185 71% 22%; /* #105A60 - teal/dark cyan */
+    --secondary-foreground: 0 0% 97%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 86 45% 25%; /* #385723 - dark olive green */
+    --accent-foreground: 0 0% 97%;
+
+    --conservation: 86 45% 25%; /* Using olive green */
+    --conservation-foreground: 0 0% 97%;
+
+    --gradient-earth: linear-gradient(135deg, hsl(318 77% 22%), hsl(185 71% 22%));
+    --gradient-sky: linear-gradient(135deg, hsl(185 71% 22%), hsl(86 45% 25%));
+    --gradient-sunset: linear-gradient(135deg, hsl(318 77% 22%), hsl(86 45% 25%));
+    --gradient-conservation: linear-gradient(135deg, hsl(86 45% 25%), hsl(185 71% 22%));
+
+    --shadow-earth: 0 4px 20px hsl(318 77% 22% / 0.2);
+    --shadow-soft: 0 2px 10px hsl(185 71% 22% / 0.15);
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 97%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
+    --ring: 318 77% 22%;
+
+    --sidebar-background: 0 0% 97%;
+    --sidebar-foreground: 0 0% 8%;
+    --sidebar-primary: 318 77% 22%;
+    --sidebar-primary-foreground: 0 0% 97%;
+    --sidebar-accent: 0 0% 90%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 318 77% 22%;
+  }
 }
 
 @layer base {
