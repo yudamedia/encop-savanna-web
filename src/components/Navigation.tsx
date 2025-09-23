@@ -18,8 +18,8 @@ export const Navigation = () => {
   const navItems = [
     { name: 'Experiences', href: '/experiences' },
     { name: 'Accommodation', href: '/accommodation' },
-    { name: 'Conservation', href: '#conservation' },
-    { name: 'Culture', href: '#culture' },
+    { name: 'Conservation', href: '/conservation' },
+    { name: 'Culture', href: '/culture' },
     { name: 'Contact', href: '/contact' },
   ];
 
