@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Conservation from "./pages/Conservation";
 import Culture from "./pages/Culture";
+import Wireframes from "./pages/Wireframes";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/booking" element={<Booking />} />
             <Route path="/conservation" element={<Conservation />} />
             <Route path="/culture" element={<Culture />} />
+            <Route path="/wireframes" element={<Wireframes />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

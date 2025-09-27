@@ -21,6 +21,7 @@ export const Navigation = () => {
     { name: 'Conservation', href: '/conservation' },
     { name: 'Culture', href: '/culture' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Wireframes', href: '/wireframes' },
   ];
 
   return (
